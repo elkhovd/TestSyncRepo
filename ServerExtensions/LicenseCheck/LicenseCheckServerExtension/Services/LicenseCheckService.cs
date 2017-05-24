@@ -45,8 +45,10 @@ namespace LicenseCheckServerExtension.Services
         private static bool CheckLicenseFeature(UserSession session, Guid featureId)
         {
             bool featureExists = false;
-          
-            string licenseXml = (string)session.Properties["License"]?.Value;
+
+            string licenseXml = string.Empty;
+            if (session.Properties["License"] != null)
+                licenseXml = (string)session.Properties["License"].Value;
 
             if (!string.IsNullOrEmpty(licenseXml))
             {
