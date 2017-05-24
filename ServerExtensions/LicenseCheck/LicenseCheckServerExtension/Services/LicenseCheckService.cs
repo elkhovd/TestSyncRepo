@@ -22,7 +22,10 @@ namespace LicenseCheckServerExtension.Services
         /// <param name="provider">Service provider</param>
         public LicenseCheckService(IServiceProvider provider)
         {
-            serviceProvider = provider ?? throw new ArgumentNullException(nameof(provider));
+            if (provider == null)
+                throw new ArgumentNullException(nameof(provider));
+
+            this.serviceProvider = provider;
             serviceHelper = new ServiceHelper(serviceProvider);
         }
 

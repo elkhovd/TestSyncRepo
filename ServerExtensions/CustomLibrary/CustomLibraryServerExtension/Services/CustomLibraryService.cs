@@ -19,7 +19,10 @@ namespace CustomLibraryServerExtension.Services
         /// <param name="provider">Service provider</param>
         public CustomLibraryService(IServiceProvider provider)
         {
-            this.serviceProvider = provider ?? throw new ArgumentNullException(nameof(provider));
+            if (provider == null)
+                throw new ArgumentNullException(nameof(provider));
+
+            this.serviceProvider = provider;
             this.serviceHelper = new ServiceHelper(serviceProvider);
         }
 

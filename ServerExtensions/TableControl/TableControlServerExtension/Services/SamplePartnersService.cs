@@ -18,7 +18,10 @@ namespace TableControlServerExtension.Services
         /// <param name="provider">Service provider</param>
         public SamplePartnersService(IServiceProvider provider)
         {
-            serviceProvider = provider ?? throw new ArgumentNullException(nameof(provider));
+            if (provider == null)
+                throw new ArgumentNullException(nameof(provider));
+
+            this.serviceProvider = provider;
             serviceHelper = new ServiceHelper(serviceProvider);
         }
 

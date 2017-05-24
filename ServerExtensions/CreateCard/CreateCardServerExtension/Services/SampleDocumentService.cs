@@ -21,7 +21,10 @@ namespace CreateCardServerExtension.Services
         /// <param name="provider">Service provider</param>
         public SampleDocumentService(IServiceProvider provider)
         {
-            serviceProvider = provider ?? throw new ArgumentException("provider");
+            if (provider == null)
+                throw new ArgumentNullException(nameof(provider));
+
+            this.serviceProvider = provider;
             serviceHelper = new ServiceHelper(serviceProvider);
         }
 
