@@ -22,7 +22,7 @@ namespace AcquaintancePanelServerExtension.Services
         public LayoutBPService(IServiceProvider provider)
         {
             if (provider == null)
-                throw new ArgumentNullException(nameof(provider));
+                throw new ArgumentNullException("provider");
 
             this.serviceProvider = provider;
             this.serviceHelper = new ServiceHelper(serviceProvider);

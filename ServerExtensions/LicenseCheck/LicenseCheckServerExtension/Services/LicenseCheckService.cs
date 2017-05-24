@@ -23,7 +23,7 @@ namespace LicenseCheckServerExtension.Services
         public LicenseCheckService(IServiceProvider provider)
         {
             if (provider == null)
-                throw new ArgumentNullException(nameof(provider));
+                throw new ArgumentNullException("provider");
 
             this.serviceProvider = provider;
             serviceHelper = new ServiceHelper(serviceProvider);
