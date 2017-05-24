@@ -389,6 +389,34 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ShiftTasksEndDateWebExtensi
 		SlnRelativePath = "ServerExtensions\ShiftTasksEndDate\ShiftTasksEndDateWebExtension\"
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreateCardDialog", "CreateCardDialog", "{C395F8EE-E2D5-4820-B4E7-C977B17E9DC0}"
+	ProjectSection(SolutionItems) = preProject
+		ServerExtensions\CreateCardDialog\README.md = ServerExtensions\CreateCardDialog\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateCardDialogServerExtension", "ServerExtensions\CreateCardDialog\CreateCardDialogServerExtension\CreateCardDialogServerExtension.csproj", "{FFC43D70-6EE2-4AFF-AE0D-D63E2BA36ABC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CreateCardDialogWebExtension", "ServerExtensions\CreateCardDialog\CreateCardDialogWebExtension\", "{3D73D91A-9442-428B-93D1-8754C263C2F4}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_10427"
+		Debug.AspNetCompiler.PhysicalPath = "ServerExtensions\CreateCardDialog\CreateCardDialogWebExtension\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10427\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_10427"
+		Release.AspNetCompiler.PhysicalPath = "ServerExtensions\CreateCardDialog\CreateCardDialogWebExtension\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_10427\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "10427"
+		SlnRelativePath = "ServerExtensions\CreateCardDialog\CreateCardDialogWebExtension\"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -503,6 +531,14 @@ Global
 		{8363429A-202D-44A1-A8FE-28BFA0E37E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8363429A-202D-44A1-A8FE-28BFA0E37E0A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{8363429A-202D-44A1-A8FE-28BFA0E37E0A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FFC43D70-6EE2-4AFF-AE0D-D63E2BA36ABC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC43D70-6EE2-4AFF-AE0D-D63E2BA36ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC43D70-6EE2-4AFF-AE0D-D63E2BA36ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC43D70-6EE2-4AFF-AE0D-D63E2BA36ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D73D91A-9442-428B-93D1-8754C263C2F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D73D91A-9442-428B-93D1-8754C263C2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D73D91A-9442-428B-93D1-8754C263C2F4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D73D91A-9442-428B-93D1-8754C263C2F4}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -557,5 +593,8 @@ Global
 		{DD48F169-D017-436A-B039-06D82F5997EA} = {CA2E05C9-ADE2-49C8-805D-C704ED6D0D2F}
 		{7C396895-1139-4B3E-BFB7-74EB02E70D03} = {DD48F169-D017-436A-B039-06D82F5997EA}
 		{8363429A-202D-44A1-A8FE-28BFA0E37E0A} = {DD48F169-D017-436A-B039-06D82F5997EA}
+		{C395F8EE-E2D5-4820-B4E7-C977B17E9DC0} = {CA2E05C9-ADE2-49C8-805D-C704ED6D0D2F}
+		{FFC43D70-6EE2-4AFF-AE0D-D63E2BA36ABC} = {C395F8EE-E2D5-4820-B4E7-C977B17E9DC0}
+		{3D73D91A-9442-428B-93D1-8754C263C2F4} = {C395F8EE-E2D5-4820-B4E7-C977B17E9DC0}
 	EndGlobalSection
 EndGlobal
