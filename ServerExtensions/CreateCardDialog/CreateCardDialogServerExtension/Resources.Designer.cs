@@ -61,11 +61,11 @@ namespace CreateCardDialogServerExtension {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Approval stage.
+        ///   Looks up a localized string similar to Default stage name.
         /// </summary>
-        public static string ApprovalStage_CardCreateDisplay {
+        public static string ApprovalStage_DefaultName {
             get {
-                return ResourceManager.GetString("ApprovalStage_CardCreateDisplay", resourceCulture);
+                return ResourceManager.GetString("ApprovalStage_DefaultName", resourceCulture);
             }
         }
     }

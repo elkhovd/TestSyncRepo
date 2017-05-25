@@ -45,6 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DocsVision.ApprovalDesigner.ObjectModel">
+      <HintPath>..\..\..\Assemblies\Docsvision\DocsVision.ApprovalDesigner.ObjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DocsVision.BackOffice.ObjectModel, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7148afe997f90519, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Assemblies\Docsvision\DocsVision.BackOffice.ObjectModel.dll</HintPath>
@@ -96,6 +100,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApprovalStageCardFactory.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="LayoutWebClientExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

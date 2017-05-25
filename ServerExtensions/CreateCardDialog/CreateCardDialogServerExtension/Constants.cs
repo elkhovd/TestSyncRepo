@@ -1,4 +1,6 @@
-﻿namespace CreateCardDialogServerExtension
+﻿using System;
+
+namespace CreateCardDialogServerExtension
 {
     /// <summary>
     /// Represents a static class for layout extension web constants

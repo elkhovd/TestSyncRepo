@@ -6,6 +6,8 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Resources;
 using System.Web.Mvc;
+using DocsVision.BackOffice.WebClient.Services;
+using DocsVision.ApprovalDesigner.CardLib.CardDefs;
 
 namespace CreateCardDialogServerExtension
 {
@@ -47,33 +49,16 @@ namespace CreateCardDialogServerExtension
             get { return new Version(FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion); }
         }
 
-        protected override WebClientNavigatorExtension GetNavigatorExtension()
-        {
-            var navigatorExtensionInitInfo = new WebClientNavigatorExtensionInitInfo
-            {
-                ExtensionName = ExtensionName,
-                ExtensionVersion = ExtensionVersion,
-                Namespace = Namespace
-            };
-
-            var navigatorExtension = new WebClientNavigatorExtension(navigatorExtensionInitInfo);
-
-            var cardTypes = new List<CardTypeWeb>
-            {
-                // Должен быть указан маршрут для создания карточки.  
-                new CardTypeWeb("ApprovalStage", "Stage", "НЕ ИСПОЛЬЗЕТСЯ В ЛК8", new Guid("0DB13C90-21B6-49D8-9070-8144DF97552A"), "НЕ ИСПОЛЬЗУЕТСЯ ВООБЩЕ", "ApprovalStage_CardCreateDisplay",
-                    Resources.ResourceManager) { CssClass = "approval-stage"}
-            };
-
-
-            navigatorExtension.CardTypes.AddRange(cardTypes);
-
-            return navigatorExtension;
-        }
-
 
         #region WebClientExtension Overrides
 
+        protected override Dictionary<Guid, Func<ICardFactory>> GetCardFactories()
+        {
+            return new Dictionary<Guid, Func<ICardFactory>>
+            {
+                {CardApprovalStage.ID , () => new  ApprovalStageCardFactory() }
+            };
+        }
 
         /// <summary>
         /// Gets resource managers for layout extension

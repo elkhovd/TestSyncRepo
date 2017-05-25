@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ApprovalStage_CardCreateDisplay" xml:space="preserve">
-    <value>Approval stage</value>
+  <data name="ApprovalStage_DefaultName" xml:space="preserve">
+    <value>Default stage name</value>
   </data>
 </root>
