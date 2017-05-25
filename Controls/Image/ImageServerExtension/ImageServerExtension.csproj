@@ -55,6 +55,7 @@
     <Reference Include="Docsvision.Platform.Client, Version=6.0.4089.0, Culture=neutral, PublicKeyToken=7148afe997f90519, processorArchitecture=MSIL">
       <HintPath>..\..\..\Assemblies\Docsvision\Docsvision.Platform.Client.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Docsvision.Standard.Cards">
       <HintPath>..\..\..\Assemblies\Docsvision\Docsvision.Standard.Cards.dll</HintPath>
