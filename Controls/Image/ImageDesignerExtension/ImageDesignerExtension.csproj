@@ -43,8 +43,9 @@
     <AssemblyOriginatorKeyFile>..\..\..\StrongNameKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Docsvision.Backoffice.Cards, Version=6.0.4089.0, Culture=neutral, PublicKeyToken=7148afe997f90519">
+    <Reference Include="Docsvision.Backoffice.Cards, Version=6.0.4089.0, Culture=neutral, PublicKeyToken=7148afe997f90519, processorArchitecture=MSIL">
       <HintPath>..\..\..\Assemblies\Docsvision\Docsvision.Backoffice.Cards.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="Docsvision.LayoutEditor.ObjectModel">
       <HintPath>..\..\..\Assemblies\Docsvision\Docsvision.LayoutEditor.ObjectModel.dll</HintPath>
