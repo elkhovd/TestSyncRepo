@@ -20,7 +20,9 @@
 5. Скопировать каталог ServerExtensions\TableControl\TableControlServerExtension\Content\LayoutTableControl в каталог "Путь к установленному Web-клиент\Site\Content"
 6. Скопировать содержимое каталога \bin\WebClientBin в каталог "Путь к установленному Web-клиент\Site\Bin"
 7. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
+
 	 <Extension TypeName="TableControlServerExtension.LayoutWebClientExtension, TableControlServerExtension" Target="WebClient"/>
+	 
 8. Перезапустить IIS
 
 ## Проверка примера
