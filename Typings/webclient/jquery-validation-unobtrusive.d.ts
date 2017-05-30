@@ -1,4 +1,4 @@
-﻿// Type definitions for Microsoft jQuery Unobtrusive Validation v3.2.3
+// Type definitions for Microsoft jQuery Unobtrusive Validation v3.2.3
 // Project: http://aspnetwebstack.codeplex.com/
 // Definitions by: Matt Brooks <https://github.com/EnableSoftware>
 // Definitions: https://github.com/borisyankov/DefinitelyTyped

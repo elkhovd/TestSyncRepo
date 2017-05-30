@@ -1,4 +1,4 @@
-﻿interface IFileUploadOptions {
+interface IFileUploadOptions {
     acceptFileTypes: string;
     maxFileSize: number;
     maxAllowedSumSize: number;

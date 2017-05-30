@@ -1,4 +1,4 @@
-﻿declare module textArea {
+declare module textArea {
     interface TextAreaAutosize {
         //(): any;
         //(element: Array<HTMLElement>, options?: any);
