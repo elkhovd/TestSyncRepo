@@ -21,7 +21,9 @@
 5. Скопировать содержимое каталога \bin\Plugins в каталог "Путь к установленному Web-клиент\Plugins"
 6. Скопировать каталог Controls\Image\ImageServerExtension\Content\ImageSample в каталог "Путь к установленному Web-клиент\Site\Content"
 7. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку: 
+
 	<Extension TypeName="ImageServerExtension.LayoutWebClientExtension, ImageServerExtension" Target="WebClient"/>
+	
 8. Перезапустить IIS
 
 ## Проверка примера
