@@ -1,6 +1,6 @@
 ﻿[
   {
-    "outputFile": "Styles/controls/sample-checkbox.css",
-    "inputFile": "Styles/controls/sample-checkbox.scss"
+    "outputFile": "Content/Extensions/CheckBox/Styles/controls/sample-checkbox.css",
+    "inputFile": "Content/Extensions/CheckBox/Styles/controls/sample-checkbox.scss"
   }
 ]

@@ -13,7 +13,7 @@
 
 1. Открыть /Samples.sln
 2. Собрать проект ClientScripts > ControlsRelation > ControlsRelationWebExtension
-3. Скопировать каталог ClientScripts\ControlsRelation\ControlsRelationWebExtension в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
+3. Скопировать каталог SamplesOutput\Site\Content\Extensions\ControlsRelation в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
 4. Перезапустить IIS
 
 ## Проверка примера
@@ -32,10 +32,6 @@
 ## Проект ControlsRelationWebExtension
 
 Проект-расширение клиентской части Web-клиент. Содержит клиентский скрипт c функцией showRelatedControl реализующей взаимодействие контролов.
-
-## Список изменений
-
-[12.05.2017] Загружена первоначальная версия примера
 
 Внимание! Данный пример демонстрирует только доступ к элементу разметки. 
 При реализации расширений рекомендуется использовать экспорт разметок в виде Решения.

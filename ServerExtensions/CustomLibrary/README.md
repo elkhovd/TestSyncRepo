@@ -16,17 +16,15 @@
 
 1. Открыть /Samples.sln
 2. Собрать проекты ServerExtensions > CustomLibrary > CustomLibrary.ObjectModel и CustomLibraryServerExtension
-3. Открыть в командной строке каталог \ServerExtensions\CustomLibrary\CustomLibraryServerExtension\Content и скомпилировать TypeScript с помощью команды
-"c:\Program Files (x86)\Microsoft SDKs\TypeScript\2.2\tsc.exe" (Путь может отличаться в зависимости от пути установки TypeScript 2.2)
-4. Скопировать содержимое каталога \bin\WebClientBin в каталог "Путь к установленному Web-клиент\Site\Bin"
+3. Скопировать каталог SamplesOutput\Site\Bin\CustomLibraryServerExtension в каталог "Путь к установленному Web-клиент\Site\Bin"
+4. Скопировать каталог SamplesOutput\Site\Content\Extensions\CustomLibrary в каталог "Путь к установленному Web-клиент\Site\Content"
 5. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
-
+```xml
 	 <Extension TypeName="CustomLibraryServerExtension.LayoutWebClientExtension, CustomLibraryServerExtension" Target="WebClient"/>
-	 
-6. Скопировать каталог \ServerExtensions\CustomLibrary\CustomLibraryServerExtension\Content в каталог "Путь к установленному Web-клиент\Site\Content"
+```
 7. (Внимание! Перед выполнением следующего шага, рекомендуется сделать резервную копию базы данных DocsVision)
 На сервере Docsvision 5 установить Docsvision 5 Resource Kit, установить обновление DVExplorer. С помощью утилиты DVCardManager следует загрузить 
-в БД Docsvision библиотеку CustomCardLib из каталога \ServerExtensions\CustomLibrary\CardDefs. Подробное описание процедуры загрузки пользовательской 
+в БД Docsvision библиотеку CustomCardLib из каталога SamplesOutput\SamplesCardDefs\CustomLibrary. Подробное описание процедуры загрузки пользовательской 
 библиотеки карточек содержится в документации разработчика Docsvision 5. 
 8. С помощью утилиты DVExplorer подключиться к БД, открыть карточку справочника Custom Directory, добавить строку секции MainInfo 
 и установить значение 777 в поле Counter. Сохранить изменения. Подробное описание работы с утилитой DVExplorer содержится в документации 
@@ -58,8 +56,4 @@
 
 Проект-расширение для Web-клиент. Содержит сервис по работе со справочником CustomDirectory, методы контроллера CustomLibrary 
 для взаимодейстия с клиентскими скриптами веб-приложения, а так же клиентский скрипт getCustomData.
-
-## Список изменений
-
-[12.05.2017] Загружена первоначальная версия примера
 

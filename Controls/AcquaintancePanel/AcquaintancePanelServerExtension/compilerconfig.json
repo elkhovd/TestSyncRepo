@@ -1,6 +1,6 @@
 ﻿[
   {
-    "outputFile": "Content/AcquaintancePanel/Styles/controls/acquaintance-panel.css",
-    "inputFile": "Content/AcquaintancePanel/Styles/controls/acquaintance-panel.scss"
+    "outputFile": "Content/Extensions/AcquaintancePanel/Styles/controls/acquaintance-panel.css",
+    "inputFile": "Content/Extensions/AcquaintancePanel/Styles/controls/acquaintance-panel.scss"
   }
 ]

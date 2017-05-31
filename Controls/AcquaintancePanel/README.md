@@ -14,17 +14,14 @@
 1. Открыть /Samples.sln
 2. Собрать проект Controls > AcquaintancePanel > AcquaintancePanelDesignerExtension
 3. Собрать проект Controls > AcquaintancePanel > AcquaintancePanelServerExtension
-4. В Solution Explorer щелкнуть правой кнопкой мыши по файлу Controls > AcquaintancePanel > AcquaintancePanelServerExtension > Content > AcquaintancePanel > Styles > controls > acquaintance-panel.scss, 
-и выбрать пункт меню Web Compiler > Re-compile file.
-5. Скопировать содержимое каталога \bin\Plugins в каталог "Путь к установленному Web-клиент\Plugins"
-6. Скопировать содержимое каталога \bin\WebClientBin (AcquaintancePanelServerExtension.dll) в каталог "Путь к установленному Web-клиент\Site\Bin"
-7. Скопировать xml-файл AcquaintancePanel.xml из каталога Controls\AcquaintancePanel\AcquaintancePanelDesignerExtension\xml в каталог "Путь к установленному Web-клиент\Plugins"
-8. Скопировать каталог Controls\AcquaintancePanel\AcquaintancePanelServerExtension\Content\AcquaintancePanel в каталог "Путь к установленному Web-клиент\Site\Content"
-9. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
-
+4. Скопировать каталог SamplesOutput\Plugins\AcquaintancePanelDesignerExtension в каталог "Путь к установленному Web-клиент\Plugins"
+5. Скопировать каталог SamplesOutput\Site\Bin\AcquaintancePanelServerExtension в каталог "Путь к установленному Web-клиент\Site\Bin"
+6. Скопировать каталог SamplesOutput\Site\Content\Extensions\AcquaintancePanel в каталог "Путь к установленному Web-клиент\Site\Content"
+7. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
+```xml
 	 <Extension TypeName="AcquaintancePanelServerExtension.LayoutWebClientExtension, AcquaintancePanelServerExtension" Target="WebClient"/>
-	 
-10. Перезапустить IIS
+```
+8. Перезапустить IIS
 
 ## Проверка примера
 
@@ -57,8 +54,3 @@
 Боковая панель включает в себя стандартные контролы Web-клиент - MultipleEmployees (для задания списка сотрудников, которым придет задание на ознакомление)
  и DateTimePicker (дата "Ознакомиться до"). При нажатии на кнопку "Отправить на ознакомление" спроисходит валидация параметров и с помощью объекта requestManager 
  отправляется запрос на сервер. 
-
-
-## Список изменений
-
-[12.05.2017] Загружена первоначальная версия примера

@@ -114,15 +114,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <TypeScriptCompile Include="Content\LayoutTableControl\Scripts\SampleDocument.ts" />
-    <Content Include="Content\LayoutTableControl\Styles\SampleDocument.css">
+    <TypeScriptCompile Include="Content\Extensions\LayoutTableControl\Scripts\SampleDocument.ts" />
+    <Content Include="Content\Extensions\LayoutTableControl\Styles\SampleDocument.css">
       <DependentUpon>SampleDocument.scss</DependentUpon>
     </Content>
-    <Content Include="Content\LayoutTableControl\Styles\SampleDocument.min.css">
+    <Content Include="Content\Extensions\LayoutTableControl\Styles\SampleDocument.min.css">
       <DependentUpon>SampleDocument.css</DependentUpon>
     </Content>
     <Content Include="tsconfig.json" />
-    <Content Include="Content\LayoutTableControl\Styles\SampleDocument.scss" />
+    <Content Include="Content\Extensions\LayoutTableControl\Styles\SampleDocument.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -148,7 +148,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Content\LayoutTableControl\Scripts\Services\SamplePartnersController\SamplePartnersController.ts" />
+    <TypeScriptCompile Include="Content\Extensions\LayoutTableControl\Scripts\Services\SamplePartnersController\SamplePartnersController.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -183,19 +183,19 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy "$(ProjectDir)Content\*.*" "$(SolutionDir)SamplesOutput\Site\Content\" /Y /I /E
+xcopy "$(TargetDir)$(TargetName)*.dll" "$(SolutionDir)SamplesOutput\Site\Bin\$(TargetName)\" /Y /I /E</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
   </PropertyGroup>
-  <Import Project="..\..\..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets" Condition="Exists('..\..\..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets')" />
+  <Import Project="..\..\..\packages\BuildWebCompiler.1.11.347\build\BuildWebCompiler.targets" Condition="Exists('..\..\..\packages\BuildWebCompiler.1.11.347\build\BuildWebCompiler.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets'))" />
+    <Error Condition="!Exists('..\..\..\packages\BuildWebCompiler.1.11.347\build\BuildWebCompiler.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\BuildWebCompiler.1.11.347\build\BuildWebCompiler.targets'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

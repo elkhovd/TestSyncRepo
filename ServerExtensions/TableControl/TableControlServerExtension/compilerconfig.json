@@ -1,6 +1,6 @@
 ﻿[
   {
-    "outputFile": "Content/LayoutTableControl/Styles/SampleDocument.css",
-    "inputFile": "Content/LayoutTableControl/Styles/SampleDocument.scss"
+    "outputFile": "Content/Extensions/LayoutTableControl/Styles/SampleDocument.css",
+    "inputFile": "Content/Extensions/LayoutTableControl/Styles/SampleDocument.scss"
   }
 ]

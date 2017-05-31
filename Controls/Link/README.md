@@ -14,13 +14,10 @@
 ## Сборка и установка
 
 1. Открыть /Samples.sln
-2. В Solution Explorer щелкнуть правой кнопкой мыши по файлу Controls > Link > LinkWebExtension > Styles > controls > sample-link.scss, 
-и выбрать пункт меню Web Compiler > Re-compile file.
-3. Открыть в командной строке каталог LinkWebExtension и скомпилировать TypeScript с помощью команды
-"c:\Program Files (x86)\Microsoft SDKs\TypeScript\2.2\tsc.exe" (Путь может отличаться в зависимости от пути установки TypeScript 2.2)
-4. Скопировать xml-файл SampleLinkControlDescription.xml из каталога Controls\Link в каталог "Путь к установленному Web-клиент\Plugins"
-5. Скопировать каталог \Controls\Link\LinkWebExtension в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
-6. Перезапустить IIS
+2. Собрать проект Controls > Link > LinkWebExtension
+3. Скопировать каталог SamplesOutput\Plugins\SampleLinkControl в каталог "Путь к установленному Web-клиент\Plugins"
+4. Скопировать каталог SamplesOutput\Site\Content\Extensions\Link в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
+5. Перезапустить IIS
 
 ## Проверка примера
 
@@ -43,7 +40,3 @@
 ## Проект LinkWebExtension
 
 Проект-расширение клиентской части Web-клиент. Содержит клиентский скрипт и стили для SampleLink.
-
-## Список изменений
-
-[12.05.2017] Загружена первоначальная версия примера

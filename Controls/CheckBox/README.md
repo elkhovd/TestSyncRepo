@@ -13,13 +13,10 @@
 
 1. Открыть /Samples.sln
 2. Собрать проект Controls > CheckBox > CheckBoxDesignerExtension
-3. В Solution Explorer щелкнуть правой кнопкой мыши по файлу Controls > CheckBox > CheckBoxWebExtension > Styles > controls > sample-checkbox.scss, 
-и выбрать пункт меню Web Compiler > Re-compile file.
-4. Открыть в командной строке каталог CheckBoxWebExtension и скомпилировать TypeScript с помощью команды
-"c:\Program Files (x86)\Microsoft SDKs\TypeScript\2.2\tsc.exe" (Путь может отличаться в зависимости от пути установки TypeScript 2.2)
-5. Скопировать содержимое каталога \bin\Plugins в каталог "Путь к установленному Web-клиент\Plugins"
-6. Скопировать каталог \Controls\CheckBox\CheckBoxWebExtension в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
-7. Перезапустить IIS
+3. Собрать проект Controls > CheckBox > CheckBoxWebExtension
+4. Скопировать каталог SamplesOutput\Plugins\CheckBoxDesignerExtension в каталог "Путь к установленному Web-клиент\Plugins"
+5. Скопировать каталог SamplesOutput\Site\Content\Extensions\CheckBox в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
+6. Перезапустить IIS
 
 ## Проверка примера
 
@@ -44,7 +41,3 @@
 ## Проект CheckBoxWebExtension
 
 Проект-расширение клиентской части Web-клиент. Содержит клиентский скрипт и стили для CheckBox.
-
-## Список изменений
-
-[12.05.2017] Загружена первоначальная версия примера

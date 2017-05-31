@@ -144,13 +144,13 @@
     <Compile Include="Services\LicenseCheckService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\LicenseCheck\Styles\" />
+    <Folder Include="Content\Extensions\LicenseCheck\Styles\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Content\LicenseCheck\Scripts\Services\LicenseCheckController\LicenseCheckController.tsx" />
+    <TypeScriptCompile Include="Content\Extensions\LicenseCheck\Scripts\Services\LicenseCheckController\LicenseCheckController.tsx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -185,8 +185,8 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy "$(ProjectDir)Content\*.*" "$(SolutionDir)SamplesOutput\Site\Content\" /Y /I /E
+xcopy "$(TargetDir)$(TargetName)*.dll" "$(SolutionDir)SamplesOutput\Site\Bin\$(TargetName)\" /Y /I /E</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>

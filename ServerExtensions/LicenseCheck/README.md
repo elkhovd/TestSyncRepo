@@ -11,16 +11,14 @@
 ## Сборка
 
 1. Открыть /Samples.sln
-3. Собрать проект ServerExtensions > LicenseCheck > LicenseCheckServerExtension
-4. Открыть в командной строке каталог ServerExtensions\LicenseCheck\LicenseCheckServerExtension\Content\LicenseCheck и скомпилировать TypeScript с помощью команды
-"c:\Program Files (x86)\Microsoft SDKs\TypeScript\2.2\tsc.exe" (Путь может отличаться в зависимости от пути установки TypeScript 2.2)
-7. Скопировать каталог ServerExtensions\LicenseCheck\LicenseCheckServerExtension\Content\LicenseCheck в каталог "Путь к установленному Web-клиент\Site\Content"
-5. Скопировать содержимое каталога \bin\WebClientBin в каталог "Путь к установленному Web-клиент\Site\Bin"
-8. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
-
+2. Собрать проект ServerExtensions > LicenseCheck > LicenseCheckServerExtension
+3. Скопировать каталог SamplesOutput\Site\Content\Extensions\LicenseCheck в каталог "Путь к установленному Web-клиент\Site\Content"
+4. Скопировать каталог SamplesOutput\Site\Bin\LicenseCheckServerExtension в каталог "Путь к установленному Web-клиент\Site\Bin"
+5. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
+```xml
 	 <Extension TypeName="LicenseCheckServerExtension.LayoutWebClientExtension, LicenseCheckServerExtension" Target="WebClient"/>
-	 
-7. Перезапустить IIS
+```
+6. Перезапустить IIS
 
 ## Проверка примера
 
@@ -43,9 +41,4 @@
 Реализован контроллер LicenseCheckController с методом CheckFeature, который вызывает сервис ILicenseCheckService
 
 При нажатии на кнопку с помощью объекта requestManager отправляется запрос на сервер. Пользователю отображается сообщение о наличии или отсутствии опции.
-
-
-## Список изменений
-
-[12.05.2017] Загружена первоначальная версия примера
 

@@ -130,13 +130,13 @@
     <Compile Include="Services\SampleDocumentService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\LayoutCreateCard\Styles\" />
+    <Folder Include="Content\Extensions\LayoutCreateCard\Styles\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Content\LayoutCreateCard\Scripts\Services\SampleDocumentController\SampleDocumentController.ts" />
+    <TypeScriptCompile Include="Content\Extensions\LayoutCreateCard\Scripts\Services\SampleDocumentController\SampleDocumentController.ts" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\CustomLibrary\CustomLibrary.ObjectModel\CustomLibrary.ObjectModel.csproj">
@@ -178,8 +178,8 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy "$(ProjectDir)Content\*.*" "$(SolutionDir)SamplesOutput\Site\Content\" /Y /I /E
+xcopy "$(TargetDir)$(TargetName)*.dll" "$(SolutionDir)SamplesOutput\Site\Bin\$(TargetName)\" /Y /I /E</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>

@@ -13,17 +13,13 @@
 
 1. Открыть /Samples.sln
 2. Собрать проект ServerExtensions > TableControl > TableControlServerExtension
-3. Открыть в командной строке каталог ServerExtensions\TableControl\TableControlServerExtension\Content\LayoutTableControl и скомпилировать TypeScript с помощью команды
-"c:\Program Files (x86)\Microsoft SDKs\TypeScript\2.2\tsc.exe" (Путь может отличаться в зависимости от пути установки TypeScript 2.2)
-4. В Solution Explorer щелкнуть правой кнопкой мыши по файлу ServerExtensions > TableControl> TableControlServerExtension > Content > Styles > SampleDocument.scss, 
-и выбрать пункт меню Web Compiler > Re-compile file.
-5. Скопировать каталог ServerExtensions\TableControl\TableControlServerExtension\Content\LayoutTableControl в каталог "Путь к установленному Web-клиент\Site\Content"
-6. Скопировать содержимое каталога \bin\WebClientBin в каталог "Путь к установленному Web-клиент\Site\Bin"
-7. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
-
+3. Скопировать каталог SamplesOutput\Site\Content\Extensions\LayoutTableControl в каталог "Путь к установленному Web-клиент\Site\Content"
+4. Скопировать каталог SamplesOutput\Site\Bin\TableControlServerExtension в каталог "Путь к установленному Web-клиент\Site\Bin"
+5. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
+```xml
 	 <Extension TypeName="TableControlServerExtension.LayoutWebClientExtension, TableControlServerExtension" Target="WebClient"/>
-	 
-8. Перезапустить IIS
+```
+6. Перезапустить IIS
 
 ## Проверка примера
 
@@ -49,7 +45,3 @@
 
 В клиентском скрипте реализована функция sampleDocumentViewCardOpened, которая вызывается на событие On card opened.
 Она отправляет запрос на сервер WebClient.samplePartnersController.GetPartnersInfo и заполняет таблицу вернувшимися данными.
-
-## Список изменений
-
-[12.05.2017] Загружена первоначальная версия примера

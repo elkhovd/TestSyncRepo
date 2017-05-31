@@ -14,7 +14,7 @@
 
 1. Открыть /Samples.sln
 2. Собрать проект ClientScripts > ValidateOnStateChanging > ValidateOnStateChangingWebExtension
-3. Скопировать каталог ClientScripts\ValidateOnStateChanging\ValidateOnStateChangingWebExtension в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
+3. Скопировать каталог SamplesOutput\Site\Content\Extensions\ValidateOnStateChanging в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
 4. Перезапустить IIS
 
 ## Проверка примера
@@ -34,10 +34,6 @@
 
 Проект-расширение клиентской части Web-клиент. Содержит клиентский скрипт c функцией-обработчиком события validateOnStateChanging, реализующей валидацию данных контрола
  при смене состояния.
-
-## Список изменений
-
-[12.05.2017] Загружена первоначальная версия примера
 
 Внимание! Данный пример демонстрирует только доступ к элементу разметки. 
 При реализации расширений рекомендуется использовать экспорт разметок в виде Решения.

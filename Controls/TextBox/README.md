@@ -15,13 +15,10 @@
 
 1. Открыть /Samples.sln
 2. Собрать проект Controls > TextBox > TextBoxDesignerExtension
-3. В Solution Explorer щелкнуть правой кнопкой мыши по файлу Controls > TextBox > TextBoxWebExtension > Styles > controls > sample-textbox.scss, 
-и выбрать пункт меню Web Compiler > Re-compile file.
-4. Открыть в командной строке каталог TextBoxWebExtension и скомпилировать TypeScript с помощью команды
-"c:\Program Files (x86)\Microsoft SDKs\TypeScript\2.2\tsc.exe" (Путь может отличаться в зависимости от пути установки TypeScript 2.2)
-5. Скопировать содержимое каталога \bin\Plugins в каталог "Путь к установленному Web-клиент\Plugins"
-6. Скопировать каталог \Controls\TextBox\TextBoxWebExtension в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
-7. Перезапустить IIS
+3. Собрать проект Controls > TextBox > TextBoxWebExtension
+4. Скопировать каталог SamplesOutput\Plugins\TextBoxDesignerExtension в каталог "Путь к установленному Web-клиент\Plugins"
+5. Скопировать каталог SamplesOutput\Site\Content\Extensions\TextBox в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
+6. Перезапустить IIS
 
 ## Проверка примера
 
@@ -45,7 +42,3 @@
 ## Проект CheckBoxWebExtension
 
 Проект-расширение клиентской части Web-клиент. Содержит клиентский скрипт, отрисовывающий textbox и картинку (свойство Url), и стили для TextBox. 
-
-## Список изменений
-
-[12.05.2017] Загружена первоначальная версия примера

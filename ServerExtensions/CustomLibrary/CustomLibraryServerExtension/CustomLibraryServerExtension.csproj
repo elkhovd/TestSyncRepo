@@ -138,10 +138,10 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Content\CustomLibrary\Scripts\Services\CustomLibraryController\CustomLibraryController.tsx" />
+    <TypeScriptCompile Include="Content\Extensions\CustomLibrary\Scripts\Services\CustomLibraryController\CustomLibraryController.tsx" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\CustomLibrary\Styles\" />
+    <Folder Include="Content\Extensions\CustomLibrary\Styles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -176,8 +176,8 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>xcopy "$(ProjectDir)Content\*.*" "$(SolutionDir)SamplesOutput\Site\Content\" /Y /I /E
+xcopy "$(TargetDir)$(TargetName)*.dll" "$(SolutionDir)SamplesOutput\Site\Bin\$(TargetName)\" /Y /I /E</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>

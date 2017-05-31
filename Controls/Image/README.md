@@ -16,14 +16,13 @@
 1. Открыть /Samples.sln
 2. Собрать проект Controls > Image > ImageDesignerExtension
 3. Собрать проект Controls > Image > ImageServerExtension
-4. В Solution Explorer щелкнуть правой кнопкой мыши по файлу Controls > Image > ImageServerExtension > Content > ImageSample > Styles > controls > sample-image.scss, 
-и выбрать пункт меню Web Compiler > Re-compile file.
-5. Скопировать содержимое каталога \bin\Plugins в каталог "Путь к установленному Web-клиент\Plugins"
-6. Скопировать каталог Controls\Image\ImageServerExtension\Content\ImageSample в каталог "Путь к установленному Web-клиент\Site\Content"
+4. Скопировать каталог SamplesOutput\Plugins\ImageDesignerExtension в каталог "Путь к установленному Web-клиент\Plugins"
+5. Скопировать каталог SamplesOutput\Site\Bin\ImageServerExtension в каталог "Путь к установленному Web-клиент\Site\Bin"
+6. Скопировать каталог SamplesOutput\Site\Content\Extensions\ImageSample в каталог "Путь к установленному Web-клиент\Site\Content"
 7. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку: 
-
+```xml
 	<Extension TypeName="ImageServerExtension.LayoutWebClientExtension, ImageServerExtension" Target="WebClient"/>
-	
+```
 8. Перезапустить IIS
 
 ## Проверка примера
@@ -53,7 +52,3 @@
 с помощью класса SliderConverter и метода ConvertForDisplay. Эта модель дублируется на клиенте ISliderItem[]. 
 Таким образом реализована связка List<SliderItemDataModel> - JSON - ISliderItem[] между сервером и клиентом.
 С помощью Slider можно пролистывать несколько изображений, вешая обработчики onClick на соответсвующие элементы разметки.
-
-## Список изменений
-
-[12.05.2017] Загружена первоначальная версия примера
