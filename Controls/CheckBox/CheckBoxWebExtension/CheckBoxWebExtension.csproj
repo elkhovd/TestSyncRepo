@@ -43,12 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Content\Extensions\CheckBox\Styles\controls\sample-checkbox.css">
-      <DependentUpon>sample-checkbox.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Extensions\CheckBox\Styles\controls\sample-checkbox.min.css">
-      <DependentUpon>sample-checkbox.css</DependentUpon>
-    </Content>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

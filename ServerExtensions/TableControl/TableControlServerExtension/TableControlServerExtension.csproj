@@ -113,12 +113,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <TypeScriptCompile Include="Content\Extensions\LayoutTableControl\Scripts\SampleDocument.ts" />
-    <Content Include="Content\Extensions\LayoutTableControl\Styles\SampleDocument.css">
-      <DependentUpon>SampleDocument.scss</DependentUpon>
-    </Content>
-    <Content Include="Content\Extensions\LayoutTableControl\Styles\SampleDocument.min.css">
-      <DependentUpon>SampleDocument.css</DependentUpon>
-    </Content>
     <Content Include="tsconfig.json" />
     <Content Include="Content\Extensions\LayoutTableControl\Styles\SampleDocument.scss" />
     <None Include="compilerconfig.json" />
