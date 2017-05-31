@@ -172,6 +172,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkWebExtension", "Control
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBoxWebExtension", "Controls\TextBox\TextBoxWebExtension\TextBoxWebExtension.csproj", "{356F71CE-C7E3-4206-9BEE-AEDA93F25C89}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateWebExtension", "TemplateWebExtension", "{7032B127-5F1B-4166-BDC4-3DD787D85ECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateWebExtension", "ProjectTemplates\TemplateWebExtension\TemplateWebExtension.csproj", "{43C8996E-C8A2-428F-A9CF-70B89CB3B643}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -274,6 +278,10 @@ Global
 		{356F71CE-C7E3-4206-9BEE-AEDA93F25C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{356F71CE-C7E3-4206-9BEE-AEDA93F25C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{356F71CE-C7E3-4206-9BEE-AEDA93F25C89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43C8996E-C8A2-428F-A9CF-70B89CB3B643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43C8996E-C8A2-428F-A9CF-70B89CB3B643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43C8996E-C8A2-428F-A9CF-70B89CB3B643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43C8996E-C8A2-428F-A9CF-70B89CB3B643}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -324,5 +332,7 @@ Global
 		{4FB5A553-FC00-4708-9151-CA03490883AD} = {00EC9F97-3069-4968-A20E-5889DD92EED6}
 		{F212817A-B0A0-4E86-98C7-FD8B10487C84} = {C6E27973-906C-4348-95CA-86CF21C4A54E}
 		{356F71CE-C7E3-4206-9BEE-AEDA93F25C89} = {2D7DC9A7-4666-4051-8650-B8BADCAF0940}
+		{7032B127-5F1B-4166-BDC4-3DD787D85ECA} = {19CCC537-4EF5-4B53-9238-FF188F5E52FD}
+		{43C8996E-C8A2-428F-A9CF-70B89CB3B643} = {7032B127-5F1B-4166-BDC4-3DD787D85ECA}
 	EndGlobalSection
 EndGlobal

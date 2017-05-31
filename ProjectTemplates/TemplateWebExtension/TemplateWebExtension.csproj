@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,12 +8,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F212817A-B0A0-4E86-98C7-FD8B10487C84}</ProjectGuid>
+    <ProjectGuid>{43C8996E-C8A2-428F-A9CF-70B89CB3B643}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LinkWebExtension</RootNamespace>
-    <AssemblyName>LinkWebExtension</AssemblyName>
+    <RootNamespace>TemplateWebExtension</RootNamespace>
+    <AssemblyName>TemplateWebExtension</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -43,35 +44,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
+    <Content Include="compilerconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="compilerconfig.json" />
     <Content Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </Content>
-    <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Content\Extensions\Link\Scripts\Controls\SampleLink\SampleLink.tsx" />
-    <TypeScriptCompile Include="Content\Extensions\Link\Scripts\Controls\SampleLink\SampleLinkImpl.tsx" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Extensions\Link\Styles\controls\sample-link.scss" />
+    <TypeScriptCompile Include="Content\Extensions\Template\Scripts\Template.tsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Extensions\Template\Styles\template.scss" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -87,9 +83,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1207</DevelopmentServerPort>
+          <DevelopmentServerPort>20260</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:38057/</IISUrl>
+          <IISUrl>http://localhost:20260/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -99,17 +95,9 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\..\..\packages\BuildWebCompiler.1.11.347\build\BuildWebCompiler.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\BuildWebCompiler.1.11.347\build\BuildWebCompiler.targets'))" />
-  </Target>
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)Content\*.*" "$(SolutionDir)SamplesOutput\Site\Content\" /Y /I /E
-xcopy "$(ProjectDir)..\*.xml" "$(SolutionDir)SamplesOutput\Plugins\SampleLinkControl\" /Y /I</PostBuildEvent>
+    <PostBuildEvent>rem xcopy "$(ProjectDir)Content\*.*" "$(SolutionDir)SamplesOutput\Site\Content\" /Y /I /E</PostBuildEvent>
   </PropertyGroup>
-  <Import Project="..\..\..\packages\BuildWebCompiler.1.11.347\build\BuildWebCompiler.targets" Condition="Exists('..\..\..\packages\BuildWebCompiler.1.11.347\build\BuildWebCompiler.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
