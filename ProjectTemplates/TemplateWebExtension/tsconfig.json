@@ -13,7 +13,7 @@
     "lib": [ "dom", "es6" ]
   },
   "include": [
-    "../../../Typings/**/*.d.ts",
+    "../../Typings/**/*.d.ts",
     "Content/Extensions/Template/Scripts/**/*.ts*"
   ]
 }
