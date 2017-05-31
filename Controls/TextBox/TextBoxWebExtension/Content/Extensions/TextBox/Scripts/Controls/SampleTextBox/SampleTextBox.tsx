@@ -14,8 +14,8 @@
         @r imageHeight: string = "1.5em";
         @r imageWidth: string = "1.5em";
         
-        @event dataChanged: BasicApiEvent<ISampleDataChangedEventArgs>;
-        @event imageClick: BasicApiEvent<IEventArgs>;
+        @apiEvent dataChanged: BasicApiEvent<ISampleDataChangedEventArgs>;
+        @apiEvent imageClick: BasicApiEvent<IEventArgs>;
     }
 
     export interface SampleTextBoxState extends SampleTextBoxParams, BaseControlState {

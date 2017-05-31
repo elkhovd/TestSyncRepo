@@ -2318,7 +2318,7 @@ declare namespace WebClient {
     function declareSimpleProperty(target: Object, propertyKey: string): void;
 }
 declare namespace WebClient {
-    function event(target: Object, propertyKey: string | symbol): void;
+    function apiEvent(target: Object, propertyKey: string | symbol): void;
     function isEvent(control: any, propertyKey: string): boolean;
 }
 declare namespace WebClient {

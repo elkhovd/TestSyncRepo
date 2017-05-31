@@ -4,10 +4,10 @@
         @r standardCssClass?: string = "acquaintance-panel";
         @r canSend?: boolean;
 
-        @event opening?: CancelableApiEvent<IEventArgs>;
-        @event opened: BasicApiEvent<IEventArgs>;
-        @event closing: CancelableApiEvent<IEventArgs>;
-        @event closed: BasicApiEvent<IEventArgs>;
+        @apiEvent opening?: CancelableApiEvent<IEventArgs>;
+        @apiEvent opened: BasicApiEvent<IEventArgs>;
+        @apiEvent closing: CancelableApiEvent<IEventArgs>;
+        @apiEvent closed: BasicApiEvent<IEventArgs>;
     }
 
     export interface AcquaintancePanelState extends AcquaintancePanelParams, PanelState {

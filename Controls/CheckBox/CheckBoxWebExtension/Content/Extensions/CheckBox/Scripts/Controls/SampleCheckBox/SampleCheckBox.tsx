@@ -10,9 +10,9 @@
         @r defaultValue?: boolean;        
         @r canEdit?: boolean = true;        
 
-        @event dataChanged?: BasicApiEvent<IDataChangedEventArgs>;
-        @event checked: BasicApiEvent<IEventArgs>;
-        @event unchecked: BasicApiEvent<IEventArgs>;
+        @apiEvent dataChanged?: BasicApiEvent<IDataChangedEventArgs>;
+        @apiEvent checked: BasicApiEvent<IEventArgs>;
+        @apiEvent unchecked: BasicApiEvent<IEventArgs>;
     }
 
     export interface SampleCheckBoxState extends SampleCheckBoxParams, BaseControlState {
