@@ -17,9 +17,9 @@
 "c:\Program Files (x86)\Microsoft SDKs\TypeScript\2.2\tsc.exe" (Путь может отличаться в зависимости от пути установки TypeScript 2.2)
 4. Скопировать содержимое каталога \bin\WebClientBin в каталог "Путь к установленному Web-клиент\Site\Bin"
 5. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
-
-	 <Extension TypeName="ShiftTasksEndDateServerExtension.LayoutWebClientExtension, ShiftTasksEndDateServerExtension" Target="WebClient"/>
-	 
+```xml
+<Extension TypeName="ShiftTasksEndDateServerExtension.LayoutWebClientExtension, ShiftTasksEndDateServerExtension" Target="WebClient"/>
+``` 
 6. Скопировать каталог \ServerExtensions\ShiftTasksEndDate\ShiftTasksEndDateWebExtension в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
 7. Перезапустить IIS
 

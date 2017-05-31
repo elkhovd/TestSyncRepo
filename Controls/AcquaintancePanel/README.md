@@ -21,9 +21,9 @@
 7. Скопировать xml-файл AcquaintancePanel.xml из каталога Controls\AcquaintancePanel\AcquaintancePanelDesignerExtension\xml в каталог "Путь к установленному Web-клиент\Plugins"
 8. Скопировать каталог Controls\AcquaintancePanel\AcquaintancePanelServerExtension\Content\AcquaintancePanel в каталог "Путь к установленному Web-клиент\Site\Content"
 9. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
-
-	 <Extension TypeName="AcquaintancePanelServerExtension.LayoutWebClientExtension, AcquaintancePanelServerExtension" Target="WebClient"/>
-	 
+```xml
+<Extension TypeName="AcquaintancePanelServerExtension.LayoutWebClientExtension, AcquaintancePanelServerExtension" Target="WebClient"/>
+```	 
 10. Перезапустить IIS
 
 ## Проверка примера

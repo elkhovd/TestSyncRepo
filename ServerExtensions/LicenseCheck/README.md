@@ -17,9 +17,9 @@
 7. Скопировать каталог ServerExtensions\LicenseCheck\LicenseCheckServerExtension\Content\LicenseCheck в каталог "Путь к установленному Web-клиент\Site\Content"
 5. Скопировать содержимое каталога \bin\WebClientBin в каталог "Путь к установленному Web-клиент\Site\Bin"
 8. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
-
-	 <Extension TypeName="LicenseCheckServerExtension.LayoutWebClientExtension, LicenseCheckServerExtension" Target="WebClient"/>
-	 
+```xml
+<Extension TypeName="LicenseCheckServerExtension.LayoutWebClientExtension, LicenseCheckServerExtension" Target="WebClient"/>
+```	 
 7. Перезапустить IIS
 
 ## Проверка примера
