@@ -10,15 +10,15 @@
 ## Сборка и установка
 
 1. Открыть /Samples.sln
-2. Собрать проект ControlPropertiess > Url > UrlPropertyDesignerExtension
-3. Скопировать содержимое каталога \bin\Plugins в каталог "Путь к установленному Web-клиент\Plugins"
+2. Собрать проект ControlProperties > Url > UrlPropertyDesignerExtension
+3. Скопировать каталог SamplesOutput\Plugins\UrlPropertyDesignerExtension в каталог "Путь к установленному Web-клиент\Plugins"
 
 ## Проверка примера
 
 Для проверки примера необходима реализация контрола, который использует свойство Url (xml-файл или расширение конструктора)
 
 1. Реализовать и подключить контрол, который использует свойство Url:
-	 через xml(см. Controls\Link\SampleLinkControlDescription.xml) или расширение (см. Controls>Image>ImageDesignerExtension).
+	 через xml(см. Controls\Link\SampleLinkControlDescription.xml) или расширение (см. Controls > Image > ImageDesignerExtension).
 2. Запустить конструктор разметок
 3. Скопировать любую разметку
 4. Выбрать условия использования этой разметки

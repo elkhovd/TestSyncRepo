@@ -13,15 +13,13 @@
 
 1. Открыть /Samples.sln
 2. Собрать проект ServerExtensions > ShiftTasksEndDate > ShiftTasksEndDateServerExtension
-3. Открыть в командной строке каталог ShiftTasksEndDateWebExtension и скомпилировать TypeScript с помощью команды
-"c:\Program Files (x86)\Microsoft SDKs\TypeScript\2.2\tsc.exe" (Путь может отличаться в зависимости от пути установки TypeScript 2.2)
-4. Скопировать содержимое каталога \bin\WebClientBin в каталог "Путь к установленному Web-клиент\Site\Bin"
+3. Скопировать каталог SamplesOutput\Site\Bin\ShiftTasksEndDateServerExtension в каталог "Путь к установленному Web-клиент\Site\Bin"
+4. Скопировать каталог SamplesOutput\Site\Content\Extensions\ShiftTasksEndDate в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
 5. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
 ```xml
-<Extension TypeName="ShiftTasksEndDateServerExtension.LayoutWebClientExtension, ShiftTasksEndDateServerExtension" Target="WebClient"/>
-``` 
-6. Скопировать каталог \ServerExtensions\ShiftTasksEndDate\ShiftTasksEndDateWebExtension в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
-7. Перезапустить IIS
+	 <Extension TypeName="ShiftTasksEndDateServerExtension.LayoutWebClientExtension, ShiftTasksEndDateServerExtension" Target="WebClient"/>
+```
+6. Перезапустить IIS
 
 ## Проверка примера
 
@@ -47,3 +45,4 @@
 
 Проект-расширение клиентской части Web-клиент. Содержит клиентский скрипт функции shiftTasksEndDate, которая вызывается на событие OnCardSaved.
 С помощью requestManager.post отправляем запрос на сервер для изменения даты.
+

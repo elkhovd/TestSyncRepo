@@ -13,7 +13,7 @@
 
 1. Открыть /Samples.sln
 2. Собрать проект ClientScripts > ControlValidation > ControlValidationWebExtension
-3. Скопировать каталог ClientScripts\ControlValidation\ControlValidationWebExtension в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
+3. Скопировать каталог SamplesOutput\Site\Content\Extensions\ControlValidation в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
 4. Перезапустить IIS
 
 ## Проверка примера

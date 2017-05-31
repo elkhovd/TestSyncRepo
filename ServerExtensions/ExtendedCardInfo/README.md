@@ -12,15 +12,13 @@
 
 1. Открыть /Samples.sln
 2. Собрать проект ServerExtensions > ExtendedCardInfo > ExtendedCardInfoServerExtension
-3. Открыть в командной строке каталог ExtendedCardInfoWebExtension и скомпилировать TypeScript с помощью команды
-"c:\Program Files (x86)\Microsoft SDKs\TypeScript\2.2\tsc.exe" (Путь может отличаться в зависимости от пути установки TypeScript 2.2)
-4. Скопировать содержимое каталога \bin\WebClientBin в каталог "Путь к установленному Web-клиент\Site\Bin"
+3. Скопировать каталог SamplesOutput\Site\Bin\ExtendedCardInfoServerExtension в каталог "Путь к установленному Web-клиент\Site\Bin"
+4. Скопировать каталог SamplesOutput\Site\Content\Extensions\ExtendedCardInfo в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
 5. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
 ```xml
-<Extension TypeName="ExtendedCardInfoServerExtension.LayoutWebClientExtension, ExtendedCardInfoServerExtension" Target="WebClient"/>
-```	 
-6. Скопировать каталог \ServerExtensions\ExtendedCardInfo\ExtendedCardInfoWebExtension в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
-7. Перезапустить IIS
+	 <Extension TypeName="ExtendedCardInfoServerExtension.LayoutWebClientExtension, ExtendedCardInfoServerExtension" Target="WebClient"/>
+```
+6. Перезапустить IIS
 
 ## Проверка примера
 
@@ -50,3 +48,4 @@
 
 Проект-расширение клиентской части Web-клиент. Содержит клиентский скрипт функции extendedCardCheckDates, которая вызывается на событие onChanged контрола RegDate.
 С помощью requestManager.get отправляем запрос на сервер для получения расширенной модели IExtendedCardModel и сравниваем поля.
+

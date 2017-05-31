@@ -14,7 +14,7 @@
 
 1. Открыть /Samples.sln
 2. Собрать проект ClientScripts > ChangeStateByScript > ChangeStateByScriptWebExtension
-3. Скопировать каталог ClientScripts\ChangeStateByScript\ChangeStateByScriptWebExtension в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
+3. Скопировать каталог SamplesOutput\Site\Content\Extensions\ChangeStateByScript в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
 4. Перезапустить IIS
 
 ## Проверка примера
@@ -33,6 +33,9 @@
 ## Проект ChangeStateByScriptWebExtension
 
 Проект-расширение клиентской части Web-клиент. Содержит клиентский скрипт c функцией changeStateByScript реализующей изменение состояния.
+<<<<<<< HEAD
+=======
 
 Внимание! Данный пример демонстрирует только изменение состояния карточки с помощью скрипта. 
 При реализации расширений рекомендуется использовать экспорт разметок в виде Решения.
+>>>>>>> origin/develop
