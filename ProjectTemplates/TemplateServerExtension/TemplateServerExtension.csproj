@@ -50,6 +50,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Docsvision.Backoffice.Cards">
+      <HintPath>..\..\Assemblies\Docsvision\Docsvision.Backoffice.Cards.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="DocsVision.BackOffice.WebClient">
       <HintPath>..\..\Assemblies\Docsvision\DocsVision.BackOffice.WebClient.dll</HintPath>
       <Private>False</Private>
