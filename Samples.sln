@@ -140,6 +140,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VSTemplates", "VSTemplates"
 	ProjectSection(SolutionItems) = preProject
 		ProjectTemplates\VSTemplates\TemplateDesignerExtension.zip = ProjectTemplates\VSTemplates\TemplateDesignerExtension.zip
 		ProjectTemplates\VSTemplates\TemplateServerExtension.zip = ProjectTemplates\VSTemplates\TemplateServerExtension.zip
+		ProjectTemplates\VSTemplates\TemplateWebExtension.zip = ProjectTemplates\VSTemplates\TemplateWebExtension.zip
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ShiftTasksEndDate", "ShiftTasksEndDate", "{DD48F169-D017-436A-B039-06D82F5997EA}"
