@@ -375,11 +375,11 @@ declare namespace WebClient {
          * @param save Should save generated value into the card or not.
          * @returns Generated number
          */
-        GenerateNumber(cardId: string, generationRuleId: string, info: ISimpleBindingInfo, save: boolean): JQueryDeferred<any>;
+        GenerateNumber(cardId: string, generationRuleId: string, info: IBindingInfoExt, save: boolean): JQueryDeferred<any>;
         /**
          * Resets the card number and removes it.
          */
-        ReleaseNumber(cardId: string, numberId: string): JQueryDeferred<void>;
+        ReleaseNumber(cardId: string, numberId: string, info: IBindingInfoExt): JQueryDeferred<void>;
         SendForAcquaintance(cardId: string, employeeIds: string[], endDate?: Date): JQueryDeferred<any>;
     }
     var layoutDocumentController: LayoutDocumentController;
@@ -388,7 +388,7 @@ declare namespace WebClient {
     interface INumberInfo {
         id: string;
         number: string;
-        bindingInfo: ISimpleBindingInfo;
+        bindingInfo: IBindingInfoExt;
     }
 }
 declare namespace WebClient {
@@ -564,6 +564,11 @@ declare namespace WebClient {
         timestamp: number;
         /** Deffered object, that shows saving process */
         defered: JQueryDeferred<any>;
+    }
+}
+declare namespace WebClient {
+    interface IBindingInfoExt extends ISimpleBindingInfo {
+        editOperation: string;
     }
 }
 declare namespace WebClient {
@@ -1650,6 +1655,8 @@ declare namespace WebClient {
 declare namespace WebClient {
     class ControlSelector extends React.Component<IControlSelectorProps, any> {
         constructor(props: any);
+        componentWillMount(): void;
+        componentWillReceiveProps?(nextProps: IControlSelectorProps, nextContext: any): void;
         render(): JSX.Element;
     }
 }
@@ -1658,6 +1665,11 @@ declare namespace WebClient {
         properties: any;
         children: IControlSelectorProps[];
         controlTypeName: string;
+    }
+}
+declare namespace WebClient {
+    interface IControlSelectorState {
+        component: typeof React.Component;
     }
 }
 declare namespace WebClient {
@@ -1950,8 +1962,8 @@ declare namespace WebClient {
         private bootstrapp;
         private lastQeury;
         constructor(bootstrapp: LayoutManager);
-        get<TResponse>(url: string, routeChangeProtection?: boolean): JQueryDeferred<TResponse>;
-        post<TResponse>(url: string, data: any, routeChangeProtection?: boolean): JQueryDeferred<TResponse>;
+        get<TResponse>(url: string): JQueryDeferred<TResponse>;
+        post<TResponse>(url: string, data: any): JQueryDeferred<TResponse>;
         rawRequest(url: string, data: any, method: RequestMethods, routeChangeProtection?: boolean): JQueryDeferred<XMLHttpRequest>;
         readonly busy: boolean;
         processRawResponse<T>(rawResponse: any, showSuccessNotification?: boolean): ICommonResponse<T>;
@@ -2246,6 +2258,12 @@ declare namespace WebClient {
 declare namespace WebClient {
     class CardTypeResolver {
         protected CardTypeMap: ICardTypeMap;
+        protected unknownCardType: {
+            id: string;
+            name: string;
+            cssClass: string;
+            caption: string;
+        };
         registerCardType(cardTypeInfo: ICardTypeInfo): void;
         getCardTypeInfo(cardTypeId: string): ICardTypeInfo;
     }
@@ -2824,7 +2842,7 @@ declare namespace WebClient {
         protected onDataChanged(eventArgs: IDataChangedEventArgs): void;
         protected onInPlaceEditOpening(callback: () => void): void;
         protected onInPlaceEditOpened(): void;
-        protected onInPlaceEditClosinig(callback: () => void): void;
+        protected onInPlaceEditClosinig(sender: any, args: ICancelableEventArgs<any>): void;
         protected onInPlaceEditClosed(): void;
         validate(params: any): IValidationResult;
         protected readonly editAvailable: boolean;
@@ -3215,8 +3233,8 @@ declare namespace WebClient {
     abstract class PanelImpl<P extends PanelParams, S extends PanelImplState> extends BaseControlImpl<P, S> {
         constructor(props: P);
         componentWillMount(): void;
-        protected getChildren(): JSX.Element[];
-        protected prepareChildren(): void;
+        protected renderChildren(children?: ILayoutModel[]): JSX.Element[];
+        protected prepareChildren(children?: ILayoutModel[]): void;
         protected getCssStyle(): React.CSSProperties;
         protected getCssClass(): string;
         children: any[];
@@ -3512,6 +3530,8 @@ declare namespace WebClient {
         standardCssClass?: string;
         okButtonText: string;
         cancelButtonText: string;
+        okButtonDisabled: boolean;
+        cancelButtonDisabled: boolean;
     }
     /** @internal */
     interface SavingButtonsState extends SavingButtonsParams, BaseControlState {
@@ -3556,7 +3576,7 @@ declare namespace WebClient {
     /** @internal */
     interface NumeratorState extends NumeratorParams, InputBasedControlState<INumberInfo> {
         numeratorBinding: IBindingResult<INumberInfo>;
-        bindingInfo: ISimpleBindingInfo;
+        bindingInfo: IBindingInfoExt;
     }
     class Numerator extends InputBasedControl<INumberInfo, NumeratorParams, NumeratorState> {
         protected createParams(): NumeratorParams;
@@ -6062,17 +6082,17 @@ declare namespace WebClient {
         /** Определяет, возможно ли показать ход согласования: `true` - возможно (элемент управления связан с данными и разрешена настроенная операция редактирования), `false` - невозможно. */
         showReportAllowed?: boolean;
         /** Событие возникает при открытии окна хода согласования. */
-        reportOpening?: CancelableApiEvent<IApprovingReportOpeningEventArgs>;
+        approvingReportOpening?: CancelableApiEvent<IApprovingReportOpeningEventArgs>;
         /** Событие возникает при закрытии окна хода согласования. */
-        reportClosing?: CancelableApiEvent<IEventArgs>;
+        approvingReportClosing?: CancelableApiEvent<IEventArgs>;
         /** Событие возникает при обновлении данных хода согласования. */
-        reportRefreshing?: CancelableApiEvent<IApprovingReportRefreshingEventArgs>;
+        approvingReportRefreshing?: CancelableApiEvent<IApprovingReportRefreshingEventArgs>;
         /** Событие возникает после открытия окна хода согласования. */
-        reportOpened?: BasicApiEvent<IApprovingReportOpenedEventArgs>;
+        approvingReportOpened?: BasicApiEvent<IApprovingReportOpenedEventArgs>;
         /** Событие возникает после закрытия окна хода согласования. */
-        reportClosed?: BasicApiEvent<IEventArgs>;
+        approvingReportClosed?: BasicApiEvent<IEventArgs>;
         /** Событие возникает после обновления данных хода согласования. */
-        reportRefreshed?: BasicApiEvent<IApprovingReportRefreshedEventArgs>;
+        approvingReportRefreshed?: BasicApiEvent<IApprovingReportRefreshedEventArgs>;
     }
     /** @internal */
     interface AgreementHistoryState extends BaseControlState, AgreementHistoryParams {

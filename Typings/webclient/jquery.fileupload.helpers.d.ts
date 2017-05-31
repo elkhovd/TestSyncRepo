@@ -25,4 +25,6 @@ declare function initFileUpload(
     filesContainerTableElem: HTMLElement,
     options?: IFileUploadOptions);
 
+declare function deinitFileUpload(uploadFormElem: HTMLElement);
+
 declare function fileUploadSend(formElem: HTMLElement, fileList?: File[]): JQueryXHR;
