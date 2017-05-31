@@ -8,6 +8,6 @@
         /// <summary>
         /// Represents namespace
         /// </summary>
-        public const string Namespace = "ImageServerExtension";
+        public const string Namespace = "TemplateServerExtension";
     }
 }

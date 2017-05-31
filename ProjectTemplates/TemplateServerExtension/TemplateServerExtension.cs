@@ -54,26 +54,7 @@ namespace TemplateServerExtension
 
         #region WebClientExtension Overrides
 
-        /// <summary>
-        /// Gets registered navigator extension
-        /// </summary>
-        /// <returns>registered navigator extension</returns>
-        protected override WebClientNavigatorExtension GetNavigatorExtension()
-        {
-            var navigatorExtensionInitInfo = new WebClientNavigatorExtensionInitInfo
-            {
-                Scripts = (ScriptBundle)(new ScriptBundle("~/Content/ImageSample/Scripts/Bundle")
-                .IncludeDirectory("~/Content/ImageSample/Scripts", "*.js", true)),
-                StyleSheets = (StyleBundle)(new StyleBundle("~/Content/ImageSample/Styles/Bundle")
-                .IncludeDirectory("~/Content/ImageSample/Styles", "*.css", true)),
-                ExtensionName = ExtensionName,
-                ExtensionVersion = ExtensionVersion
-            };
-
-            return new WebClientNavigatorExtension(navigatorExtensionInitInfo);
-        }
-
-        /// <summary>
+         /// <summary>
         /// Gets registered service activators
         /// </summary>
         /// <param name="serviceProvider">service provider</param>
