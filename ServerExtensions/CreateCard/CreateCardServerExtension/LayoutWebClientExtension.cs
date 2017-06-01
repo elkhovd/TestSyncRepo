@@ -85,10 +85,10 @@ namespace CreateCardServerExtension
         {
             var navigatorExtensionInitInfo = new WebClientNavigatorExtensionInitInfo
             {
-                Scripts = (ScriptBundle)(new ScriptBundle("~/Content/LayoutCreateCard/Scripts/Bundle")
-                .IncludeDirectory("~/Content/LayoutCreateCard/Scripts", "*.js", true)),
-                StyleSheets = (StyleBundle)(new StyleBundle("~/Content/LayoutCreateCard/Styles/Bundle")
-                .IncludeDirectory("~/Content/LayoutCreateCard/Styles", "*.css", true)),
+                Scripts = (ScriptBundle)(new ScriptBundle("~/Content/Extensions/LayoutCreateCard/Scripts/Bundle")
+                .IncludeDirectory("~/Content/Extensions/LayoutCreateCard/Scripts", "*.js", true)),
+                StyleSheets = (StyleBundle)(new StyleBundle("~/Content/Extensions/LayoutCreateCard/Styles/Bundle")
+                .IncludeDirectory("~/Content/Extensions/LayoutCreateCard/Styles", "*.css", true)),
                 ExtensionName = ExtensionName,
                 ExtensionVersion = ExtensionVersion
             };

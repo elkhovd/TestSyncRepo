@@ -88,10 +88,10 @@ namespace CustomLibraryServerExtension
         {
             var navigatorExtensionInitInfo = new WebClientNavigatorExtensionInitInfo
             {
-                Scripts = (ScriptBundle)(new ScriptBundle("~/Content/CustomLibrary/Scripts/Bundle")
-                .IncludeDirectory("~/Content/CustomLibrary/Scripts", "*.js", true)),
-                StyleSheets = (StyleBundle)(new StyleBundle("~/Content/CustomLibrary/Styles/Bundle")
-                .IncludeDirectory("~/Content/CustomLibrary/Styles", "*.css", true)),
+                Scripts = (ScriptBundle)(new ScriptBundle("~/Content/Extensions/CustomLibrary/Scripts/Bundle")
+                .IncludeDirectory("~/Content/Extensions/CustomLibrary/Scripts", "*.js", true)),
+                StyleSheets = (StyleBundle)(new StyleBundle("~/Content/Extensions/CustomLibrary/Styles/Bundle")
+                .IncludeDirectory("~/Content/Extensions/CustomLibrary/Styles", "*.css", true)),
                 ExtensionName = ExtensionName,
                 ExtensionVersion = ExtensionVersion
             };

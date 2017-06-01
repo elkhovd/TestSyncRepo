@@ -85,10 +85,10 @@ namespace TableControlServerExtension
         {
             var navigatorExtensionInitInfo = new WebClientNavigatorExtensionInitInfo
             {
-                Scripts = (ScriptBundle)(new ScriptBundle("~/Content/LayoutTableControl/Scripts/Bundle")
-                .IncludeDirectory("~/Content/LayoutTableControl/Scripts", "*.js", true)),
-                StyleSheets = (StyleBundle)(new StyleBundle("~/Content/LayoutTableControl/Styles/Bundle")
-                .IncludeDirectory("~/Content/LayoutTableControl/Styles", "*.css", true)),
+                Scripts = (ScriptBundle)(new ScriptBundle("~/Content/Extensions/LayoutTableControl/Scripts/Bundle")
+                .IncludeDirectory("~/Content/Extensions/LayoutTableControl/Scripts", "*.js", true)),
+                StyleSheets = (StyleBundle)(new StyleBundle("~/Content/Extensions/LayoutTableControl/Styles/Bundle")
+                .IncludeDirectory("~/Content/Extensions/LayoutTableControl/Styles", "*.css", true)),
                 ExtensionName = ExtensionName,
                 ExtensionVersion = ExtensionVersion
             };

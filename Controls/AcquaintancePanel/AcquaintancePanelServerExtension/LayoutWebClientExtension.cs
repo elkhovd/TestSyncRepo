@@ -98,10 +98,10 @@ namespace AcquaintancePanelServerExtension
         {
             var navigatorExtensionInitInfo = new WebClientNavigatorExtensionInitInfo
             {
-                Scripts = (ScriptBundle)(new ScriptBundle("~/Content/AcquaintancePanel/Scripts/Bundle")
-                .IncludeDirectory("~/Content/AcquaintancePanel/Scripts", "*.js", true)),
-                StyleSheets = (StyleBundle)(new StyleBundle("~/Content/AcquaintancePanel/Styles/Bundle")
-                .IncludeDirectory("~/Content/AcquaintancePanel/Styles", "*.css", true)),
+                Scripts = (ScriptBundle)(new ScriptBundle("~/Content/Extensions/AcquaintancePanel/Scripts/Bundle")
+                .IncludeDirectory("~/Content/Extensions/AcquaintancePanel/Scripts", "*.js", true)),
+                StyleSheets = (StyleBundle)(new StyleBundle("~/Content/Extensions/AcquaintancePanel/Styles/Bundle")
+                .IncludeDirectory("~/Content/Extensions/AcquaintancePanel/Styles", "*.css", true)),
                 ExtensionName = ExtensionName,
                 ExtensionVersion = ExtensionVersion
             };
