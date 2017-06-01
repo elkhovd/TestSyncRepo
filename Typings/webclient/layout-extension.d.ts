@@ -1,11 +1,20 @@
+/** @internal  */
 declare function outgoingDocument_loadPartnerDepartmentsInfo(sender: WebClient.LayoutControl): void;
+/** @internal */
 declare function outgoingDocument_clearEmptyPartnersTableRows(sender: WebClient.LayoutControl): JQueryPromise<{}>;
+/** @internal */
 declare function documentViewCardOpened(sender: WebClient.LayoutControl, e: WebClient.IEventArgs): void;
+/** @internal */
 declare function outgoingDocumentViewCardOpened(sender: WebClient.LayoutControl, e: WebClient.IEventArgs): void;
+/** @internal */
 declare function documentViewHeaderMouseOver(sender: WebClient.LayoutControl, e: WebClient.IEventArgs): void;
+/** @internal */
 declare function documentViewHeaderMouseOut(sender: WebClient.LayoutControl, e: WebClient.IEventArgs): void;
+/** @internal */
 declare function documentSaving(sender: WebClient.LayoutControl, e: WebClient.ICancelableEventArgs<WebClient.ISaveControlData>): boolean;
+/** @internal */
 declare function outgoingDocumentSaving(sender: WebClient.LayoutControl, e: WebClient.ICancelableEventArgs<WebClient.ISaveControlData>): void;
+/** @internal */
 declare function documentCreateMainFileAdding(sender: WebClient.LayoutControl, e: WebClient.ICancelableEventArgs<WebClient.IMainFileAddingArgs>): void;
 declare namespace WebClient {
     abstract class BasicExtension implements IExtension {
