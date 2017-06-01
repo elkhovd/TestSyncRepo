@@ -58,10 +58,12 @@ namespace ImageServerExtension
         {
             var navigatorExtensionInitInfo = new WebClientNavigatorExtensionInitInfo
             {
-                Scripts = (ScriptBundle)(new ScriptBundle("~/Content/Extensions/ImageSample/Scripts/Bundle")
-                .IncludeDirectory("~/Content/Extensions/ImageSample/Scripts", "*.js", true)),
-                StyleSheets = (StyleBundle)(new StyleBundle("~/Content/Extensions/ImageSample/Styles/Bundle")
-                .IncludeDirectory("~/Content/Extensions/ImageSample/Styles", "*.css", true)),
+                //Здесь указание бандлов не требуется, т.к. Web-client автоматически создает бандлы из каталогов в каталоге Content/Extensions
+                
+                //Scripts = (ScriptBundle)(new ScriptBundle("~/Content/Extensions/ImageSample/Scripts/Bundle")
+                //.IncludeDirectory("~/Content/Extensions/ImageSample/Scripts", "*.js", true)),
+                //StyleSheets = (StyleBundle)(new StyleBundle("~/Content/Extensions/ImageSample/Styles/Bundle")
+                //.IncludeDirectory("~/Content/Extensions/ImageSample/Styles", "*.css", true)),
                 ExtensionName = ExtensionName,
                 ExtensionVersion = ExtensionVersion
             };

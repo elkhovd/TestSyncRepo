@@ -85,10 +85,12 @@ namespace LicenseCheckServerExtension
         {
             var navigatorExtensionInitInfo = new WebClientNavigatorExtensionInitInfo
             {
-                Scripts = (ScriptBundle)(new ScriptBundle("~/Content/Extensions/LicenseCheck/Scripts/Bundle")
-                .IncludeDirectory("~/Content/Extensions/LicenseCheck/Scripts", "*.js", true)),
-                StyleSheets = (StyleBundle)(new StyleBundle("~/Content/Extensions/LicenseCheck/Styles/Bundle")
-                .IncludeDirectory("~/Content/Extensions/LicenseCheck/Styles", "*.css", true)),
+                //Здесь указание бандлов не требуется, т.к. Web-client автоматически создает бандлы из каталогов в каталоге Content/Extensions
+                
+                //Scripts = (ScriptBundle)(new ScriptBundle("~/Content/Extensions/LicenseCheck/Scripts/Bundle")
+                //.IncludeDirectory("~/Content/Extensions/LicenseCheck/Scripts", "*.js", true)),
+                //StyleSheets = (StyleBundle)(new StyleBundle("~/Content/Extensions/LicenseCheck/Styles/Bundle")
+                //.IncludeDirectory("~/Content/Extensions/LicenseCheck/Styles", "*.css", true)),
                 ExtensionName = ExtensionName,
                 ExtensionVersion = ExtensionVersion
             };
