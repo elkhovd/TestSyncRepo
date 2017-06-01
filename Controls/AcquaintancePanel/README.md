@@ -8,6 +8,7 @@
 * [Visual Studio](https://www.visualstudio.com)
 * [TypeScript](https://www.typescriptlang.org)
 * [Web Compiler](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler)
+* Включенные в **Visual Studio** опции  [NuGet Package Restore](https://docs.microsoft.com/en-us/nuget/consume-packages/package-restore#enabling-and-disabling-package-restore)
 
 ## Сборка
 
