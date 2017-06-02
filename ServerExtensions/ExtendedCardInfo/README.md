@@ -14,12 +14,14 @@
 1. Открыть /Samples.sln
 2. Собрать проект ServerExtensions > ExtendedCardInfo > ExtendedCardInfoServerExtension
 3. Скопировать каталог SamplesOutput\Site\Bin\ExtendedCardInfoServerExtension в каталог "Путь к установленному Web-клиент\Site\Bin"
-4. Скопировать каталог SamplesOutput\Site\Content\Extensions\ExtendedCardInfo в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
-5. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
+4. Скопировать файл SamplesOutput\Site\Bin\ru\ExtendedCardInfoServerExtension.resources.dll в каталог "Путь к установленному Web-клиент\Site\Bin\ru"
+5. Скопировать файл SamplesOutput\Site\Bin\uk\ExtendedCardInfoServerExtension.resources.dll в каталог "Путь к установленному Web-клиент\Site\Bin\uk"
+6. Скопировать каталог SamplesOutput\Site\Content\Extensions\ExtendedCardInfo в каталог "Путь к установленному Web-клиент\Site\Content\Extensions"
+7. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
 ```xml
 	 <Extension TypeName="ExtendedCardInfoServerExtension.LayoutWebClientExtension, ExtendedCardInfoServerExtension" Target="WebClient"/>
 ```
-6. Перезапустить IIS
+8. Перезапустить IIS
 
 ## Проверка примера
 

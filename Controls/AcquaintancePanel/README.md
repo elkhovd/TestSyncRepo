@@ -17,12 +17,14 @@
 3. Собрать проект Controls > AcquaintancePanel > AcquaintancePanelServerExtension
 4. Скопировать каталог SamplesOutput\Plugins\AcquaintancePanelDesignerExtension в каталог "Путь к установленному Web-клиент\Plugins"
 5. Скопировать каталог SamplesOutput\Site\Bin\AcquaintancePanelServerExtension в каталог "Путь к установленному Web-клиент\Site\Bin"
-6. Скопировать каталог SamplesOutput\Site\Content\Extensions\AcquaintancePanel в каталог "Путь к установленному Web-клиент\Site\Content"
-7. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
+6. Скопировать файл SamplesOutput\Site\Bin\ru\AcquaintancePanelServerExtension.resources.dll в каталог "Путь к установленному Web-клиент\Site\Bin\ru"
+7. Скопировать файл SamplesOutput\Site\Bin\uk\AcquaintancePanelServerExtension.resources.dll в каталог "Путь к установленному Web-клиент\Site\Bin\uk"
+8. Скопировать каталог SamplesOutput\Site\Content\Extensions\AcquaintancePanel в каталог "Путь к установленному Web-клиент\Site\Content"
+9. В конфигурационном файле Web-клиент Web.config в секции Docsvision > Platform > Extensions добавить строку:
 ```xml
 	 <Extension TypeName="AcquaintancePanelServerExtension.LayoutWebClientExtension, AcquaintancePanelServerExtension" Target="WebClient"/>
 ```
-8. Перезапустить IIS
+10. Перезапустить IIS
 
 ## Проверка примера
 
