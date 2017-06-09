@@ -3,14 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
-using System.Web.Optimization;
 using System.Resources;
-using Docsvision.Backoffice.Client.Cards.AdvancedLayouts.BindingConverters;
 using System.Web.Mvc;
 using System.Web.Http.Controllers;
-using Docsvision.Backoffice.Client.Cards.AdvancedLayouts.BindingResolvers;
-using Docsvision.Backoffice.Client.Cards.AdvancedLayouts.LayoutModel;
 using DocsVision.BackOffice.WebClient.Services;
+using DocsVision.WebClientLibrary.ObjectModel.Services.LayoutModel;
+using DocsVision.WebClientLibrary.ObjectModel.Services.BindingResolvers;
+using DocsVision.WebClientLibrary.ObjectModel.Services.BindingConverters;
 
 namespace TemplateServerExtension
 {

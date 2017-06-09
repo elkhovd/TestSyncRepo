@@ -3,10 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
-using System.Web.Optimization;
-using System.Resources;
-using Docsvision.Backoffice.Client.Cards.AdvancedLayouts.BindingConverters;
 using ImageServerExtension.AdvancedLayouts.BindingConverters;
+using DocsVision.WebClientLibrary.ObjectModel.Services.BindingConverters;
 
 namespace ImageServerExtension
 {
@@ -79,7 +77,7 @@ namespace ImageServerExtension
         {
             return new List<IBindingConverter>
             {
-                new SliderConverter(this.ServiceProvider),
+                new SliderConverter(this.ServiceProvider)
             };
         }
 

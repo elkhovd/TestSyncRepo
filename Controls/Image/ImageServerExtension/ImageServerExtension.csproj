@@ -50,15 +50,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Docsvision.Backoffice.Cards">
-      <HintPath>..\..\..\Assemblies\Docsvision\Docsvision.Backoffice.Cards.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Docsvision.Platform.Client, Version=6.0.4089.0, Culture=neutral, PublicKeyToken=7148afe997f90519, processorArchitecture=MSIL">
       <HintPath>..\..\..\Assemblies\Docsvision\Docsvision.Platform.Client.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
+    <Reference Include="DocsVision.Platform.WebClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7148afe997f90519" />
     <Reference Include="Docsvision.Standard.Cards">
       <HintPath>..\..\..\Assemblies\Docsvision\Docsvision.Standard.Cards.dll</HintPath>
       <Private>False</Private>
@@ -66,6 +63,10 @@
     <Reference Include="Docsvision.WebClient.Extensibility">
       <HintPath>..\..\..\Assemblies\Docsvision\Docsvision.WebClient.Extensibility.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="DocsVision.WebClientLibrary.ObjectModel, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7148afe997f90519, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Assemblies\Docsvision\DocsVision.WebClientLibrary.ObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
