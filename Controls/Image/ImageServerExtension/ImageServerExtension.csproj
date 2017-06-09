@@ -50,16 +50,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Docsvision.Platform.Client, Version=6.0.4089.0, Culture=neutral, PublicKeyToken=7148afe997f90519, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Assemblies\Docsvision\Docsvision.Platform.Client.dll</HintPath>
+    <Reference Include="DocsVision.Platform.ObjectModel, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7148afe997f90519, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <Private>False</Private>
+      <HintPath>..\..\..\Assemblies\Docsvision\DocsVision.Platform.ObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="DocsVision.Platform.WebClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7148afe997f90519" />
-    <Reference Include="Docsvision.Standard.Cards">
-      <HintPath>..\..\..\Assemblies\Docsvision\Docsvision.Standard.Cards.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Docsvision.WebClient.Extensibility">
       <HintPath>..\..\..\Assemblies\Docsvision\Docsvision.WebClient.Extensibility.dll</HintPath>
       <Private>False</Private>
